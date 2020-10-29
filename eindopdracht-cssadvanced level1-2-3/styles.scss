@@ -1,0 +1,230 @@
+$bckgroundcolor : #c3cfe2;
+$uitrollen : a hover 100px;
+$colorfooter : #686de0;
+$wittekleur : #fff;
+$height : 400px;
+$width : 300px; 
+$navuitrol : hover opacity 0.7 width 200px position fixed right -1em;
+
+@mixin schaduw{box-shadow: 17px 18px 19px -8px rgb(121, 113, 113);}
+div {
+  display: block;
+}
+@mixin padfooter{ padding: 1em; }
+body{
+  display:block;
+  background-color: $bckgroundcolor;
+  
+}
+h1{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 1em;
+color: $wittekleur;}
+h2{font-family: Arial, Helvetica, sans-serif;
+font-size: 1em;
+color:rgb(11, 26, 110);
+}
+h3{font-size:1em;
+color:#3a3b5c}
+
+.overlay {
+ 
+ justify-items: center;
+
+  z-index: 1;
+border-radius: 1em;
+@include schaduw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color:#686de0;
+ 
+}
+.testimonial:hover .overlay {
+  opacity: 1;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);}
+.testimonial__btn{
+  position: relative;
+  margin:auto;
+  width:160px;
+ 
+  background: #10135a;
+  border: solid 2px #a9abf5;
+  color: white;
+
+  font-size: 20px;
+  border-radius: .5em;
+  padding: .8em;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+  .container {
+  
+    display: grid;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    grid-gap: 2em;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+    
+  .testimonial{ 
+    position: relative;
+    margin: 2em;
+    border-radius: 1em;
+    width: $width;
+    height: $height;
+   @include schaduw;
+   background: $wittekleur;
+}
+img{border-radius:100%;
+ border: solid $wittekleur 5px;
+ z-index: 1;
+ width:100px;
+}
+.testmonial__tekst{
+  z-index: 1;
+  position: relative;
+  height: 12em;
+  padding: 2em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+
+}
+
+.testmonial__tekst__img {
+ margin:auto;
+ width:100px;
+
+  
+}
+.testmonial__paars{
+  position: relative;
+    font-size: 1em;
+    background: #686de0;
+    color: $wittekleur;
+    @include padfooter;
+    padding-top: 3.5em;
+    text-align: center;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+
+}
+
+
+
+.nav{ z-index: 5;
+  position: fixed;
+  top: 7em;
+  left: -1.5em;
+  display: flex;
+  flex-direction: column;
+
+} 
+
+
+.fa {
+  border-radius: 2em 2em 2em 2em;
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  @include schaduw;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-instagram { 
+  background: #125688;
+  color: white;
+}
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+@media (min-width: 320px){ .container {
+      margin: 0 5em;
+    
+      grid-template-columns: 100%;
+      padding-top: 12em;
+  }}
+
+  @media (min-width: 768px){.container {
+    margin: 0 5em;
+  
+    grid-template-columns: 50% 50%;
+    padding-top: 12em;
+}}
+ 
+
+@media (min-width: 1000px){
+.container {
+    margin: 0 2em;
+ 
+    grid-template-columns: 30% 30% 30%;
+}
+}
+a{
+  transition: width 2s;
+}
+a:hover{
+  width:100px;
+ 
+}
